@@ -1,5 +1,6 @@
-import Head from "next/head";
-import Link from "next/link";
+import About from "./comps/About";
+import Hero from "./comps/Hero";
+import GalleryList from "./comps/GalleryList";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -19,25 +20,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({ articles }) {
-  console.log(articles);
   return (
-    <div>
-      <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
-      <main>
-        <ul>
-          {articles.map((article) => (
-            <li key={article.sys.id}>
-              <Link href={"/articles/" + article.fields.slug}>
-                <a>{article.fields.title}</a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </main>
+    <div className="content-container">
+      <Hero />
+      <About />
+      <GalleryList articles={articles} />
     </div>
   );
 }
