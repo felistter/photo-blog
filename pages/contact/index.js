@@ -42,8 +42,8 @@ const Contact = () => {
         <p>Pariser Platz 4A, 10117 Berlin</p>
 
         <img
-          className="circles-middle2-contact"
-          src="images/circles-middle2.png"
+          className="circles-middle-contact"
+          src="images/circles-middle.png"
           alt="circles-middle-contact"
         />
       </div>
