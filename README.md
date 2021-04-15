@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<p align="center">
+  <a href="#">
+    <img src="assets/TravelBlogLogo.png" alt="Travel blog" width="400" />
+  </a>
+  <br/>
+  <img src="https://github.com/felistter/travel-blog/actions/workflows/travel-blog.js.yml/badge.svg" alt="Travel Blog CI" />
+ </p>
+ 
+
+<p align="center">
+Personal blog for public sharing travel experience and memories</p>
+<br>
+
+## Project Overview
+
+Personal blog gives an amazing opportunity help other people through sharing travel experience. It inspires an audience for getting similar emotions from visited parts of the world and change their lives for the better. 
+
+It also provides a great way for meeting like minded people. Through sharing common interests, it is easier to make friends.
+
+
+## Preview
+<center>
+  <img src="assets/Preview.gif" width="100%" />
+</center>
+
+
+## Main Features & Architectural Notes
+- :hammer_and_wrench: Built with **Next.js** framework
+- :paintbrush: Designed with :heart: and **Adobe XD**
+- :art: Styled with **Sass**
+- :memo: Content served with **Contentful** headless CMS
+- :world_map: Map is served with **Google Maps API**
+- :date: Dates are formatted with **moment.js**
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/felistter/travel-blog.git
+cd travel-blog 
+npm install
+npm next dev 
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## License
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+Licensed under the MIT License.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# photo-blog
-Project of photo-blog for collecting personal memories.
