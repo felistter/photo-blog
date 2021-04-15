@@ -27,7 +27,7 @@ It also provides a great way for meeting like minded people. Through sharing com
 ## Main Features & Architectural Notes
 - :hammer_and_wrench: Built with **Next.js** framework
 - :paintbrush: Designed with :heart: and **Adobe XD**
-- :art: Styled with **Sass**
+- :art: Responsive design styled with **Sass** 
 - :memo: Content served with **Contentful** headless CMS
 - :world_map: Map is served with **Google Maps API**
 - :date: Dates are formatted with **moment.js**
