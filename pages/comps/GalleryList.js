@@ -1,4 +1,3 @@
-import Link from "next/link";
 import GalleryItem from "./GalleryItem";
 import MoreButton from "./MoreButton";
 
