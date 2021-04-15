@@ -1,5 +1,5 @@
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
-import { BLOCKS } from "@contentful/rich-text-types";
+import { BLOCKS, MARKS } from "@contentful/rich-text-types";
 import Image from "next/image";
 
 let client = require("contentful").createClient({
@@ -31,19 +31,34 @@ export async function getStaticProps({ params }) {
   };
 }
 export default function Article({ article }) {
+  const Bold = ({ children }) => <span className="bold">{children}</span>;
+
+  const Text = ({ children }) => <p className="align-center">{children}</p>;
+
+  const options = {
+    renderMark: {
+      [MARKS.BOLD]: (text) => <Bold>{text}</Bold>,
+    },
+    renderNode: {
+      [BLOCKS.PARAGRAPH]: (node, children) => <Text>{children}</Text>,
+    },
+  };
   console.log(article);
   return (
-    <div>
+    <div className="article-container">
       <h1>{article.fields.title}</h1>
-      <div>
+      <div className="article-description">
         {documentToReactComponents(article.fields.description, {
           renderNode: {
             [BLOCKS.EMBEDDED_ASSET]: (node) => (
-              <Image
-                src={"https:" + node.data.target.fields.file.url}
-                width={node.data.target.fields.file.details.image.width}
-                height={node.data.target.fields.file.details.image.height}
-              />
+              <div className="image-article">
+                <Image
+                  layout="intrinsic"
+                  width={node.data.target.fields.file.details.image.width}
+                  height={node.data.target.fields.file.details.image.height}
+                  src={"https:" + node.data.target.fields.file.url}
+                />
+              </div>
             ),
           },
         })}
@@ -51,3 +66,9 @@ export default function Article({ article }) {
     </div>
   );
 }
+
+// <Image
+//                 src={"https:" + node.data.target.fields.file.url}
+//                 width={node.data.target.fields.file.details.image.width}
+//                 height={node.data.target.fields.file.details.image.height}
+//               />
