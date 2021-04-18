@@ -11,13 +11,16 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
+    
+    env:
+      NEXT_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_CONTENTFUL_SPACE_ID }}
+      NEXT_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.NEXT_CONTENTFUL_ACCESS_TOKEN }}
+      GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLE_MAP_API_KEY }}
+        
     strategy:
       matrix:
         node-version: [14.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
     - uses: actions/checkout@v2
@@ -25,11 +28,6 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: Setup environment
-      env:
-        NEXT_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_CONTENTFUL_SPACE_ID }}
-        NEXT_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.NEXT_CONTENTFUL_ACCESS_TOKEN }}
-        GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLE_MAP_API_KEY }}
     - name: next install & build
       run: | 
         npm install --save --legacy-peer-deps
