@@ -14,10 +14,10 @@ jobs:
     runs-on: ubuntu-latest
     
     env:
-      NEXT_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_CONTENTFUL_SPACE_ID }}
-      NEXT_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.NEXT_CONTENTFUL_ACCESS_TOKEN }}
-      GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLE_MAP_API_KEY }}
-        
+      NEXT_CONTENTFUL_SPACE_ID: ${{ secrets.CONTENTFULSPACEID }}
+      NEXT_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.CONTENTFULACCESSTOKEN }}
+      GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLEMAPAPIKEY }}
+          
     strategy:
       matrix:
         node-version: [14.x]
