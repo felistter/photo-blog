@@ -25,11 +25,12 @@ jobs:
       uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
-    - name: next install & build
+    - name: Setup environment
       env:
         NEXT_CONTENTFUL_SPACE_ID: ${{ secrets.NEXT_CONTENTFUL_SPACE_ID }}
         NEXT_CONTENTFUL_ACCESS_TOKEN: ${{ secrets.NEXT_CONTENTFUL_ACCESS_TOKEN }}
         GOOGLE_MAP_API_KEY: ${{ secrets.GOOGLE_MAP_API_KEY }}
+    - name: next install & build
       run: | 
         npm install --save --legacy-peer-deps
         npx next build
