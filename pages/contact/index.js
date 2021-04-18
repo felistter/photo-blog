@@ -1,4 +1,4 @@
-import GoogleMapContact from "../comps/Map";
+import GoogleMapContact from "../../app/components/Map";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faEnvelope,

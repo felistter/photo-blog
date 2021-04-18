@@ -1,6 +1,6 @@
-import About from "./comps/About";
-import Hero from "./comps/Hero";
-import GalleryList from "./comps/GalleryList";
+import About from "../app/components/About";
+import Hero from "../app/components/Hero";
+import GalleryList from "../app/components/GalleryList";
 
 let client = require("contentful").createClient({
   space: process.env.NEXT_CONTENTFUL_SPACE_ID,
@@ -24,7 +24,7 @@ export default function Home({ articles }) {
     <div className="content-container">
       <Hero />
       <About />
-      <GalleryList articles={articles} />
+      {articles && <GalleryList articles={articles} />}
     </div>
   );
 }
