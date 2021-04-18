@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 15.x]
+        node-version: [14.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -28,6 +28,5 @@ jobs:
     - name: next install & build
       run: | 
         npm install --save --legacy-peer-deps
-        npm install next --save
-        npm next build
-        
+        npx next build
+       
