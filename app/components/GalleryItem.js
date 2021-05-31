@@ -1,7 +1,7 @@
 import moment from "moment";
 import Link from "next/link";
 
-const GalleryItem = ({ fields, sys }) => {
+const GalleryItem = ({ fields }) => {
   return (
     <div className="post-container">
       <span className="title-post">

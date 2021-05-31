@@ -8,6 +8,7 @@ const Navbar = () => {
   const refAbout = useRef(null);
   const refGallery = useRef(null);
 
+  //Asign handlers to About and Gallery links
   useEffect(() => {
     refAbout.current.onclick = (e) => {
       e.preventDefault();
